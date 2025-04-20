@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buy Button</title>
+  <style>
+    .buy-button {
+      background-color: #28a745;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .buy-button:hover {
+      background-color: #c70e0e;
+    }
+h1,h2{background-color: #28a745;
+text-align: center;
+color: chartreuse;}
+body{background-color: cyan;}
+.alu{
+  background-color: white;
+  color: black;
+  font-size: 2em;
+  text-decoration: none;
+}
+.alu:hover{
+  background-color: darkviolet;
+}
+  </style>
+</head>
+<body>
+
+  <h2>vin agency product</h2>
+  <h1>welcome to our clothes pricing</h1>
+  <table>
+	<tr>
+        <td><img src="photo/l3.jpg"width="600px" height="300px"></td>
+		<td><img src="photo/l2.avif"width="600px" height="300px"></td>
+	</tr>
+<tr>
+	<td width="600px">PRICE:20000FRW</td><td width="600px">PRICE:18000FRW</td>
+</tr>
+<tr>
+	<td width="600px">for this class of clothes</td><td width="600px">for this class of clothes</td>
+</tr>
+<tr>    
+    <td><img src="photo/l1.jpeg"width="600px" height="300px"></td>
+    <td><img src="photo/l4.jpg"width="600px" height="300px"></td>
+</tr>
+<tr>
+	<td width="600px">PRICE:10000FRW</td><td width="600px">PRICE:17500FRW</td>
+</tr>
+<tr>
+	<td width="600px">for this class of clothes</td><td width="600px">for this class of clothes</td>
+</tr>
+</table>	
+<br>
+  <button class="buy-button" onclick="buyNow()">Buy Now</button>
+
+  <script>
+    function buyNow() {
+      alert("Thank you for your purchase!");
+     
+    }
+  </script>
+  <br>
+  <br>
+<a class="alu" href="index.html">back  home</a>
+</body>
+</html>

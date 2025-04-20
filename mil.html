@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <style>
+    .product {
+      width: 200px;
+      margin: 20px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .product img {
+      width: 100%;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .product img:hover {
+      opacity: 0.8;
+    }
+
+    .buy-button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .form-popup {
+      display: none;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      background-color: #f9f9f9;
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    input, button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Product Box -->
+<div class="product">
+  <img src="l2.avif" alt="Cool Shoes" onclick="showBuyButton()">
+  <button class="buy-button" id="buyBtn" onclick="showForm()">Buy Now</button>
+
+  <!-- Hidden Form -->
+  <div class="form-popup" id="buyForm">
+    <form action="https://formsubmit.co/your@email.com" method="POST">
+      <h3>Order Form</h3>
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" name="fullname" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" name="phone" required>
+
+      <label for="item">Item Name:</label>
+      <input type="text" name="item" value="Cool Shoes" required>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" name="quantity" required>
+
+      <label for="size">Size:</label>
+      <input type="text" name="size">
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function showBuyButton() {
+    document.getElementById("buyBtn").style.display = "inline-block";
+  }
+
+  function showForm() {
+    document.getElementById("buyForm").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
+
