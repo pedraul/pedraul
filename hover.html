@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <title>Product Purchase</title>
   <style>
     .product {
@@ -9,15 +9,21 @@
       text-align: center;
       margin: 30px auto;
     }
-body{background-image: url(p.png);
-opacity:1;
-background-size: cover;
-background-repeat: no-repeat;}
+
+    body {
+      background-image: url(p.png);
+      opacity: 1;
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+    }
+
     .product img {
       width: 100%;
       cursor: pointer;
       border-radius: 10px;
       transition: 0.3s ease;
+      margin-bottom: 10px;
     }
 
     .product img:hover {
@@ -36,55 +42,41 @@ background-repeat: no-repeat;}
       display: none;
     }
 
-    .order-form {
+    .form-section {
       display: none;
-      margin-top: 15px;
+      margin-top: 20px;
       border: 1px solid #ccc;
       padding: 15px;
       border-radius: 10px;
-      background: #f9f9f9;
-    }
-    .order-form button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
+      background-color: #fff;
     }
 
-    .order-form h3 {
-      margin-bottom: 10px;
+    iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
 
 <div class="product">
-
   <img src="l6.jpg" alt="Product" onclick="showBuyButton()">
-  
   <img src="l1.jpeg" alt="Product" onclick="showBuyButton()">
-  
   <img src="l3.jpg" alt="Product" onclick="showBuyButton()">
-  
   <img src="l4.jpg" alt="Product" onclick="showBuyButton()">
-  
   <img src="l2.avif" alt="Product" onclick="showBuyButton()">
-<img src="h.png" alt="Product" onclick="showBuyButton()">
+  <img src="h.png" alt="Product" onclick="showBuyButton()">
   <img src="b.jpg" alt="Product" onclick="showBuyButton()">
-
   <button class="buy-button" id="buyButton" onclick="showForm()">Buy Now</button>
-
-  <div class="order-form" id="orderForm">
+  <div class="form-section" id="formSection">
     <h3>Complete Your Order</h3>
-    <form action="https://formsubmit.co/your@email.com" method="POST">
-      <input type="text" name="fullname" placeholder="Full Name" required>
-      <input type="text" name="email" placeholder="example@gmail.com" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="text" name="item" placeholder="product name"required>
-      <input type="number" name="quantity" placeholder="Quantity" required>
-      <input type="text" name="size" placeholder="Size (optional)">
-      <input type="number" name="price you will" placeholder="price" required>
-      <button type="submit">Submit Order</button>
-    </form>
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSekMD05iTD35k5SrVqB-QNXg1MbNI2Fo1dwIBQ92teR93o6gg/viewform?usp=header" 
+      allowfullscreen>
+      Loading…
+    </iframe>
   </div>
 </div>
 
@@ -94,7 +86,8 @@ background-repeat: no-repeat;}
   }
 
   function showForm() {
-    document.getElementById("orderForm").style.display = "block";
+    document.getElementById("formSection").style.display = "block";
+    document.getElementById("buyButton").scrollIntoView({ behavior: 'smooth' });
   }
 </script>
 
